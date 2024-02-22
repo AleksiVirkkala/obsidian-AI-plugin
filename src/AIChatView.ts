@@ -1,25 +1,25 @@
 import { ItemView, WorkspaceLeaf } from 'obsidian';
 
-import type AdvancedGraphPlugin from 'main';
+import type AIPlugin from 'main';
 
 import Root from './Root.svelte';
 import { plugin } from './stores';
 
-export const VIEW_TYPE_ADVANCED_GRAPH = 'advanced-graph-view';
+export const VIEW_TYPE_AI_CHAT = 'ai-chat-view';
 
-export class AdvancedGraphView extends ItemView {
+export class AIChatView extends ItemView {
 	component!: Root;
 
-	constructor(leaf: WorkspaceLeaf, public plugin: AdvancedGraphPlugin) {
+	constructor(leaf: WorkspaceLeaf, public plugin: AIPlugin) {
 		super(leaf);
 	}
 
 	getViewType(): string {
-		return VIEW_TYPE_ADVANCED_GRAPH;
+		return VIEW_TYPE_AI_CHAT;
 	}
 
 	getDisplayText(): string {
-		return 'Advanced Graph View';
+		return 'AI Chat View';
 	}
 
 	async onOpen() {
@@ -31,7 +31,7 @@ export class AdvancedGraphView extends ItemView {
 	}
 
 	async onClose() {
-		console.log('Closing Advanced Graph View');
+		console.log('Closing AI Chat View');
 		this.component.$destroy();
 	}
 }

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import AdvancedGraph from './AdvancedGraph.svelte';
+	import AIChat from './AIChat.svelte';
 </script>
 
-<AdvancedGraph />
+<AIChat />

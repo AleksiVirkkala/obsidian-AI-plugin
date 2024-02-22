@@ -1,17 +1,17 @@
-import AdvancedGraphPlugin from 'main';
+import AIPlugin from 'main';
 import { PluginSettingTab, App, Setting } from 'obsidian';
 
-export interface GraphSettings {
+export interface AIPluginSettings {
 	mySetting: string;
 }
-export const DEFAULT_SETTINGS: GraphSettings = {
+export const DEFAULT_SETTINGS: AIPluginSettings = {
 	mySetting: 'default'
 };
 
-export class GraphSettingTab extends PluginSettingTab {
-	plugin: AdvancedGraphPlugin;
+export class AIPluginSettingTab extends PluginSettingTab {
+	plugin: AIPlugin;
 
-	constructor(app: App, plugin: AdvancedGraphPlugin) {
+	constructor(app: App, plugin: AIPlugin) {
 		super(app, plugin);
 		this.plugin = plugin;
 	}

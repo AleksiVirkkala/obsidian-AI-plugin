@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store';
 
-import type AdvancedGraphPlugin from 'main';
+import type AIPlugin from 'main';
 
-export const plugin = writable<AdvancedGraphPlugin>();
+export const plugin = writable<AIPlugin>();
